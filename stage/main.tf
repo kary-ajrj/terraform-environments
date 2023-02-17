@@ -16,6 +16,8 @@ module "instance_port" {
 
 resource "aws_default_subnet" "subnet_example" {
   availability_zone ="ap-northeast-1a"
+
+  #A sample use of resource created earlier by Terraform.
   tags = {
     Name = module.instance_port.public_ip
   }
